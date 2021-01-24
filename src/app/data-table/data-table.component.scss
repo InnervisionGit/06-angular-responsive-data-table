@@ -1,0 +1,72 @@
+.data-table {
+  width: 80%;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+}
+.full-width-table {
+  width: 100%;
+}
+th {
+  background: #673ab7;
+  color: #ffd740;
+}
+mat-paginator {
+  background: #673ab7;
+  color: black;
+}
+
+// RESPONSIVE
+
+@media (max-width: 800px) {
+  table th {
+    display: flex;
+    height: 25px;
+    width: 10%;
+    padding-left: 10%;
+    background-color: white;
+    color: #673ab7;
+  }
+  table,
+  table tbody,
+  table tr,
+  table td {
+    display: inline-block;
+    width: 84%;
+  }
+  table tr {
+    margin-bottom: 130px;
+  }
+  table td {
+    text-align: right;
+    position: relative;
+    padding-left: 30%;
+  }
+  table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    padding-left: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+  }
+  table td:nth-child(7),
+  table td:nth-child(1) {
+    display: none;
+  }
+  table td:nth-child(2) {
+    background-color: #673ab7;
+    color: #ffd740;
+    width: 88%;
+    padding-right: 15px;
+  }
+  table tr:nth-child(9) {
+    display: none;
+  }
+
+  table th:nth-child(7),
+  table th:nth-child(1) {
+    display: none;
+  }
+}
